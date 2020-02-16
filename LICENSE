@@ -1,0 +1,10 @@
+We use the following projects (thank you!):
+- Freelancer Template (LICENSE.freelancer), original license is MIT, still deciding on license for redistributed version
+- Bootstrap v3 (LICENSE.bootstrap), original license is MIT, still deciding on license for redistributed version
+- Lato font (LICENSE.lato), redistributed under OFLv1.1 (you can use it under OFLv1.1 - make sure to keep the contents of LICENSE.lato and make sure you follow the license restrictions)
+- Montserrat font (LICENSE.montserrat), redistributed under OFLv1.1 (you can use it under OFLv1.1 - make sure to keep the contents of LICENSE.montserrat and make sure you follow the license restrictions)
+
+The Rose-Hulman logo used in the SVG file is used with fair use as we are a club affiliated with Rose-Hulman. The "R" shape was the only copyrighted thing used, but other parts of this shape were created from scratch. So, for now, img/rhlug-logo-scale.svg is copyrighted to prevent potential conflicts.
+
+Currently, we are still deciding on a license for the rest of the project.
+For now, it's copyright until then just so we have an agreement. If you have suggestions for what license we should use, please join https://t.me/rhlug.
