@@ -1,333 +1,426 @@
 <html>
-<head>
-<title>RHLUG</title>
-</head>
+  <head>
+    <title>RHLUG</title>
+    <!--JQuery from Google CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
 
-<body>
-    
+  <body>
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Theme CSS -->
-    <link href="css/freelancer.css" rel="stylesheet" type="text/css"/>
+    <link href="css/freelancer.css" rel="stylesheet" type="text/css" />
     <!-- Wiki CSS -->
-    <link href="css/customcss.css" rel="stylesheet" type="text/css"/>
+    <link href="css/customcss.css" rel="stylesheet" type="text/css" />
 
     <!-- Custom Fonts -->
     <!-- <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <link href="fonts/montserrat/montserrat.css" rel="stylesheet" type="text/css">
-    <link href="fonts/lato/latofonts.css" rel="stylesheet" type="text/css">
-    
+    <link
+      href="fonts/montserrat/montserrat.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="fonts/lato/latofonts.css" rel="stylesheet" type="text/css" />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-    <link rel="shortcut icon" href="favicon.ico"/>
+
+    <!--Script to grab the new meeting time-->
+    <script src="./js/meeting.js"></script>
+
+    <link rel="shortcut icon" href="favicon.ico" />
 
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="#page-top">RHLUG</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#email">Email Bounce</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#minecraft">Minecraft</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#wiki">Wiki</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#vpn">VPN</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#owncloud">Owncloud</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#vm">Physical/Virtual Machines</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+    <nav
+      id="mainNav"
+      class="navbar navbar-default navbar-fixed-top navbar-custom"
+    >
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+          >
+            <span class="sr-only">Toggle navigation</span> Menu
+            <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand" href="#page-top">RHLUG</a>
         </div>
-        <!-- /.container-fluid -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="hidden">
+              <a href="#page-top"></a>
+            </li>
+            <li class="page-scroll">
+              <a href="#email">Email Bounce</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#minecraft">Minecraft</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#wiki">Wiki</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#vpn">VPN</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#owncloud">Owncloud</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#vm">Physical/Virtual Machines</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#about">About</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
     </nav>
 
     <!-- Header -->
     <header>
-        <div class="container success" id="page-top">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive profile fullCircle" src="img/rhlug-logo-scaled.svg" alt="">
-                    <div>
-                      <h1 class="name">Rose-Hulman Linux Users Group</h1>
-                    </div>
-                </div>
+      <div class="container success" id="page-top">
+        <div class="row">
+          <div class="col-lg-12">
+            <img
+              class="img-responsive profile fullCircle"
+              src="img/rhlug-logo-scaled.svg"
+              alt=""
+            />
+            <div>
+              <h1 class="name">Rose-Hulman Linux Users Group</h1>
             </div>
-            <div class="row">
-                <h1><strong>Next Meeting</strong></h1>
-                <p style="font-size: 16pt">
-                    Next virtual meeting: Tuesday 4/21/2020 from 7pm-8pm EDT<br />
-                    Join online: <a href="https://meet.jit.si/RHLUG-Virtual-Meeting" style="color:#dddddd;">https://meet.jit.si/RHLUG-Virtual-Meeting</a>
-                </p>
-            </div>
+          </div>
         </div>
+        <div class="row">
+          <h1><strong>Next Meeting</strong></h1>
+          <!--Dynamically grab the meeting time using JQuery-->
+          <p style="font-size: 16pt;" id="meeting"></p>
+          <br />
+          <p style="font-size: 16pt;">
+            Join online:
+            <a
+              href="https://meet.jit.si/RHLUG-Virtual-Meeting"
+              style="color: #dddddd;"
+              >https://meet.jit.si/RHLUG-Virtual-Meeting</a
+            >
+          </p>
+        </div>
+      </div>
     </header>
 
-    
     <section id="email">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Email Bounce</h2>
-                </div>
-            </div>
-            <hr class="star-light">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p style="font-size: 16pt">
-                        Join our email bounce to get updates about meetings and	stuff.<br/>
-                        Note that to change your bounce settings you must be on campus.
-                    </p>
-                    <form action="https://mailman.rose-hulman.edu/mailman/listinfo/lug">
-                        <input class="btn-lg btn btn-success" type="submit" value="RHLUG email bounce">
-                    </form>
-                </div>
-            </div>
-         </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Email Bounce</h2>
+          </div>
+        </div>
+        <hr class="star-light" />
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="font-size: 16pt;">
+              Join our email bounce to get updates about meetings and stuff.<br />
+              Note that to change your bounce settings you must be on campus.
+            </p>
+            <form action="https://mailman.rose-hulman.edu/mailman/listinfo/lug">
+              <input
+                class="btn-lg btn btn-success"
+                type="submit"
+                value="RHLUG email bounce"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="minecraft" class="success">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>New RH Minecraft Server</h2>
-                </div>
-            </div>
-            <hr class="star-light">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p style="font-size: 16pt">
-                        We are glad to announce that the Linux Users Group will be sponsoring a campus-wide Minecraft server. <br />
-                        The server is still in early development, in the mean time, feel free to join our Discord server for all updates regarding the server!
-                        If you are interested in the internals of how the server works, check out some of the repositories of the LUG GitHub page.
-                    </p>
-                    <div class="inline-container">
-                    <form action="https://discord.gg/TRYZya8">
-                        <input class="btn-lg btn btn-success-2" type="submit" value="Join the Discord server">
-                    </form>
-                    <form action="https://github.com/RHLUG-Org">
-                        <input class="btn-lg btn btn-success-2" type="submit" value="Visit our GitHub repos">
-                    </form>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>New RH Minecraft Server</h2>
+          </div>
         </div>
+        <hr class="star-light" />
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="font-size: 16pt;">
+              We are glad to announce that the Linux Users Group will be
+              sponsoring a campus-wide Minecraft server. <br />
+              The server is still in early development, in the mean time, feel
+              free to join our Discord server for all updates regarding the
+              server! If you are interested in the internals of how the server
+              works, check out some of the repositories of the LUG GitHub page.
+            </p>
+            <div class="inline-container">
+              <form action="https://discord.gg/TRYZya8">
+                <input
+                  class="btn-lg btn btn-success-2"
+                  type="submit"
+                  value="Join the Discord server"
+                />
+              </form>
+              <form action="https://github.com/RHLUG-Org">
+                <input
+                  class="btn-lg btn btn-success-2"
+                  type="submit"
+                  value="Visit our GitHub repos"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="wiki">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Wiki</h2>
-                </div>
-            </div>
-            <hr class="star-light">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p style="font-size: 16pt">
-                        We maintain a Wiki for people using Linux at Rose-Hulman along with other general Linux information.
-                    </p>
-                    <form action="https://wiki.rhlug.org/">
-                        <input class="btn-lg btn btn-success" type="submit" value="Visit the Wiki">
-                    </form>
-                </div>
-            </div>
-         </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Wiki</h2>
+          </div>
+        </div>
+        <hr class="star-light" />
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="font-size: 16pt;">
+              We maintain a Wiki for people using Linux at Rose-Hulman along
+              with other general Linux information.
+            </p>
+            <form action="https://wiki.rhlug.org/">
+              <input
+                class="btn-lg btn btn-success"
+                type="submit"
+                value="Visit the Wiki"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="vpn" class="success">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>VPN</h2>
-                </div>
-            </div>
-            <hr class="star-light">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p style="font-size: 16pt">
-                        To access our physical machines, you have to use Rose-Hulman's SSL VPN. This will also allow to access on-campus only resources from off campus. You can do this under Linux. For more info, please visit our Wiki by clicking on the button below:
-                    </p>
-                    <form action="https://wiki.rhlug.org/wiki/Accessing_the_Off-Campus_VPN">
-                        <input class="btn-lg btn btn-success-2" type="submit" value="VPN Wiki page">
-                    </form>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>VPN</h2>
+          </div>
         </div>
+        <hr class="star-light" />
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="font-size: 16pt;">
+              To access our physical machines, you have to use Rose-Hulman's SSL
+              VPN. This will also allow to access on-campus only resources from
+              off campus. You can do this under Linux. For more info, please
+              visit our Wiki by clicking on the button below:
+            </p>
+            <form
+              action="https://wiki.rhlug.org/wiki/Accessing_the_Off-Campus_VPN"
+            >
+              <input
+                class="btn-lg btn btn-success-2"
+                type="submit"
+                value="VPN Wiki page"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="owncloud">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Owncloud</h2>
-                </div>
-            </div>
-            <hr class="star-light">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p style="font-size: 16pt">
-                        Owncloud is an open source and self-hosted alternative to Dropbox (and a few other things) which we host for Rose-Hulman Students, Faculty, and Staff to use. We are still working on getting this up and running again.
-                    </p>
-                    <form action="https://t.me/rhlug/">
-                        <input class="btn-lg btn btn-success" type="submit" value="Stay updated by joining the Telegram">
-                    </form>
-                    <!--<form action="https://owncloud.rhlug.org/">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Owncloud</h2>
+          </div>
+        </div>
+        <hr class="star-light" />
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="font-size: 16pt;">
+              Owncloud is an open source and self-hosted alternative to Dropbox
+              (and a few other things) which we host for Rose-Hulman Students,
+              Faculty, and Staff to use. We are still working on getting this up
+              and running again.
+            </p>
+            <form action="https://t.me/rhlug/">
+              <input
+                class="btn-lg btn btn-success"
+                type="submit"
+                value="Stay updated by joining the Telegram"
+              />
+            </form>
+            <!--<form action="https://owncloud.rhlug.org/">
                         <input class="btn-lg btn btn-success-2" type="submit" value="Go to Owncloud">
                     </form>-->
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="vm" class="success">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Physical/Virtual Machines</h2>
-                </div>
-            </div>
-            <hr class="star-light">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p style="font-size: 16pt">
-                        In the future, we will have a general use Linux machine for people to run stuff on, along with bare metal servers as well as virtual machines that people can request. Visit our Wiki page for updated information.
-                    </p>
-                    <form action="https://wiki.rhlug.org/LUG_Physical_and_Virtual_Machines">
-                        <input class="btn-lg btn btn-success-2" type="submit" value="Physical/Virtual Machines Wiki page">
-                    </form>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Physical/Virtual Machines</h2>
+          </div>
         </div>
+        <hr class="star-light" />
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="font-size: 16pt;">
+              In the future, we will have a general use Linux machine for people
+              to run stuff on, along with bare metal servers as well as virtual
+              machines that people can request. Visit our Wiki page for updated
+              information.
+            </p>
+            <form
+              action="https://wiki.rhlug.org/LUG_Physical_and_Virtual_Machines"
+            >
+              <input
+                class="btn-lg btn btn-success-2"
+                type="submit"
+                value="Physical/Virtual Machines Wiki page"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About</h2>
-                </div>
-            </div>
-            <hr class="star-light">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p style="font-size: 16pt">
-                        The objective of the Rose-Hulman Linux Users Group is to introduce alternative operating systems to anyone interested; to provide hardware and software to allow people to learn from each other; to support members of the Rose-Hulman community with issues related to Free and Open Source Software; to encourage the use of Free Software and Open Standards; and to inform and discuss advancements in computing technology.
-                    </p>
-                    <br />
-                    
-                    <p>If you would like more information, or if you want to stay up to date on our club is doing, please join our Telegram group by clicking below:</p>
-                    
-                    <form action="https://t.me/rhlug">
-                        <input class="btn-lg btn btn-success" type="submit" value="Join the Telegram!">
-                    </form>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>About</h2>
+          </div>
         </div>
+        <hr class="star-light" />
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="font-size: 16pt;">
+              The objective of the Rose-Hulman Linux Users Group is to introduce
+              alternative operating systems to anyone interested; to provide
+              hardware and software to allow people to learn from each other; to
+              support members of the Rose-Hulman community with issues related
+              to Free and Open Source Software; to encourage the use of Free
+              Software and Open Standards; and to inform and discuss
+              advancements in computing technology.
+            </p>
+            <br />
+
+            <p>
+              If you would like more information, or if you want to stay up to
+              date on our club is doing, please join our Telegram group by
+              clicking below:
+            </p>
+
+            <form action="https://t.me/rhlug">
+              <input
+                class="btn-lg btn btn-success"
+                type="submit"
+                value="Join the Telegram!"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="success">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Contact</h2>
-                </div>
-            </div>
-            <hr class="star-light">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p style="font-size: 16pt">
-                        Questions or want more information about us? Please contact: <img width="450" height="100" src="img/president email.png">
-                    </p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Contact</h2>
+          </div>
         </div>
+        <hr class="star-light" />
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="font-size: 16pt;">
+              Questions or want more information about us? Please contact:
+              <img width="450" height="100" src="img/president email.png" />
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-
-
 
     <!-- Footer -->
     <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center footer-col col-md-12">
-                        <h3>Location</h3>
-                        <p>5500 Wabash Avenue<br/>
-                            Terre Haute, IN 47803<br/>
-                            GPS: 39.483876, -87.324020
-                            </p>
-                        <a href="https://www.openstreetmap.org/#map=17/39.48313/-87.32341"><img src="img/campus-map.svg"></a>
-                    </div>
-                </div>
+      <div class="footer-above">
+        <div class="container">
+          <div class="row">
+            <div class="text-center footer-col col-md-12">
+              <h3>Location</h3>
+              <p>
+                5500 Wabash Avenue<br />
+                Terre Haute, IN 47803<br />
+                GPS: 39.483876, -87.324020
+              </p>
+              <a href="https://www.openstreetmap.org/#map=17/39.48313/-87.32341"
+                ><img src="img/campus-map.svg"
+              /></a>
             </div>
+          </div>
         </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Rose-Hulman Institute of Technology Linux Users Group 2020
-                    </div>
-                    
-                    <div class="col-lg-12">
-                        Since we're all about open source, we should be providing the source code. <a href="https://github.com/RHLUG-Org/RHLUG-Website" style="color:#cccccc">Click here to view the source code!</a>
-                    </div>
-                </div>
+      </div>
+      <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              Copyright &copy; Rose-Hulman Institute of Technology Linux Users
+              Group 2020
             </div>
+
+            <div class="col-lg-12">
+              Since we're all about open source, we should be providing the
+              source code.
+              <a
+                href="https://github.com/RHLUG-Org/RHLUG-Website"
+                style="color: #cccccc;"
+                >Click here to view the source code!</a
+              >
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
+      <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
     </div>
 
     <!-- JQuery -->
     <script src="js/jquery.min.js"></script>
-    
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
-
-</body>
-
+  </body>
 </html>
