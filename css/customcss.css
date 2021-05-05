@@ -5,9 +5,35 @@
 /*     font-weight:bold; */
 /* } */
 .inline-container form,
+.inline-container form div {
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+}
 
-.inline-container form div{ 
-    display: inline-block;
-    padding-left: 1em;
-    padding-right: 1em;
+.fa {
+  padding: 1rem;
+  margin: 2rem;
+  font-size: 50px !important;
+  color: #8e0007;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: ease-in 260ms;
+}
+
+.fa:hover {
+  text-decoration: none;
+}
+
+.fa-twitter:hover {
+  color: #08a0e9;
+}
+
+.fa-instagram:hover {
+  background: linear-gradient(to top right, #f7d13f, #ef3975, #5c2fcb);
+  color: white;
 }
