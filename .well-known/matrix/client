@@ -1,0 +1,5 @@
+{
+    "m.server": {
+        "base_url": "matrix.rhlug.org:443"
+    }
+}
