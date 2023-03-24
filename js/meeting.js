@@ -1,4 +1,4 @@
-let url = 'https://raw.githubusercontent.com/RHLUG-Org/RHLUG-Meeting-JSON/master/rest.json';
+let url = 'https://raw.githubusercontent.com/RHLUG-Org/RHLUG-Meeting-JSON/master/meetings.json';
 
 async function showNextMeeting(){
     var meetingsReq = await fetch(url);
