@@ -59,4 +59,18 @@
 #contactButton {
   border-radius: 5px;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, .2);
+  transition: ease .3s;
+}
+
+#contactButton:hover {
+  background: #c22;
+}
+
+#mainNav {
+  background: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-custom .navbar-nav li a {
+  transition: ease .3s;
 }
