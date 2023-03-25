@@ -6,7 +6,7 @@ async function showNextMeeting(){
     for(i = 0; i < meetings.length; i++){
         var meetingDate = new Date(meetings[i].date);
         if(meetingDate > Date.now()){
-            document.getElementById("meeting").innerText = `Next Meeting: ${meetingDate.toLocaleDateString(undefined)} from ${meetings[i].time}`;
+            document.getElementById("meeting").innerText = `Next Meeting: ${meetingDate.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} from ${meetings[i].time}`;
             document.getElementById("meeting_location").innerText = meetings[i].location;
             return;
         }
