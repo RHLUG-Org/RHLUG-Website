@@ -74,3 +74,8 @@
 .navbar-custom .navbar-nav li a {
   transition: ease .3s;
 }
+
+header {
+  background: url('background.jpg');
+  background-size: cover;
+}
