@@ -76,6 +76,6 @@
 }
 
 header {
-  background: url('background.jpg');
+  background: url('../background.jpg');
   background-size: cover;
 }
