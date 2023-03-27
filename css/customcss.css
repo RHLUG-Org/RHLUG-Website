@@ -37,3 +37,45 @@
   background: linear-gradient(to top right, #f7d13f, #ef3975, #5c2fcb);
   color: white;
 }
+
+#meetingRow {
+  background: white;
+  box-shadow: inset 0px 0px 12px rgba(0, 0, 0, .5);
+  color: black;
+  width: 70vw;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 15px;
+  border-radius: 15px;
+}
+#meetingRow a {
+  color: #47a2f1;
+}
+
+#meeting, #meeting_location {
+  font-size: 20pt;
+}
+
+#contactButton {
+  border-radius: 5px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, .2);
+  transition: ease .3s;
+}
+
+#contactButton:hover {
+  background: #c22;
+}
+
+#mainNav {
+  background: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-custom .navbar-nav li a {
+  transition: ease .3s;
+}
+
+header {
+  background: url('../background.jpg');
+  background-size: cover;
+}

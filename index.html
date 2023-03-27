@@ -68,7 +68,7 @@
               <a href="#page-top"></a>
             </li>
             <li class="page-scroll">
-              <a href="#email">Email Bounce</a>
+              <a href="#email">Join</a>
             </li>
             <li class="page-scroll">
               <a href="#minecraft">Minecraft</a>
@@ -79,20 +79,20 @@
             <li class="page-scroll">
               <a href="#vpn">VPN</a>
             </li>
-            <li class="page-scroll">
+            <!-- <li class="page-scroll">
               <a href="#owncloud">Owncloud</a>
-            </li>
+            </li>-->
             <li class="page-scroll">
               <a href="#vm">Physical/Virtual Machines</a>
             </li>
             <li class="page-scroll">
               <a href="#about">About</a>
             </li>
-            <li class="page-scroll">
+            <!-- <li class="page-scroll">
               <a href="#socials">Socials</a>
-            </li>
+            </li> -->
             <li class="page-scroll">
-              <a href="#contact">Contact</a>
+              <a href="#contact" id="contactButton">Contact</a>
             </li>
           </ul>
         </div>
@@ -116,32 +116,20 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <h1><strong>Next Meeting</strong></h1>
+        <div class="row" id="meetingRow">
+          <h1><strong>Next Meeting:</strong></h1>
           <!--Dynamically grab the meeting time using JQuery-->
-          <p style="font-size: 16pt" id="meeting"></p>
-          <br />
-          <p style="font-size: 16pt">
-            Join in-person:
-            <p style="font-size: 16pt" id="meeting_location"></p>
-          </p>
+          <p id="meeting"></p>
           <br />
           <p>
             <strong>
               &mdash;
-              OR
+              Join Us In
               &mdash;
             </strong>
           </p>
           <br />
-          <p style="font-size: 16pt">
-            Join online:
-            <a
-              href="https://meet.jit.si/RHLUG-Virtual-Meeting"
-              style="color: #dddddd"
-              >https://meet.jit.si/RHLUG-Virtual-Meeting</a
-            >
-          </p>
+          <p id="meeting_location"></p>
         </div>
       </div>
     </header>
@@ -150,23 +138,18 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2>Email Bounce</h2>
+            <h2>Join Us on Campus Groups</h2>
           </div>
         </div>
         <hr class="star-light" />
         <div class="row">
           <div class="col-lg-12 text-center">
             <p style="font-size: 16pt">
-              Join our email bounce to get updates about meetings and stuff.<br />
-              Note that to change your bounce settings you must be on campus.
+              Joining us on Campus Groups will subscribe you to our weekly meeting reminder emails. It also helps us get more funding from SGA, so it's a win-win!
             </p>
-            <form action="https://mailman.rose-hulman.edu/mailman/listinfo/lug">
-              <input
-                class="btn-lg btn btn-success"
-                type="submit"
-                value="RHLUG email bounce"
-              />
-            </form>
+            <a href="https://rosehulman.campusgroups.com/feeds?type=club&type_id=35468&tab=home">
+              <button class="btn-lg btn btn-success" style="text-decoration: none; color: white;">Join RHLUG on Campus Groups</button>
+            </a>
           </div>
         </div>
       </div>
@@ -274,7 +257,7 @@
       </div>
     </section>
 
-    <section id="owncloud">
+    <!-- <section id="owncloud">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -299,11 +282,11 @@
             </form>
             <!--<form action="https://owncloud.rhlug.org/">
                         <input class="btn-lg btn btn-success-2" type="submit" value="Go to Owncloud">
-                    </form>-->
+                    </form>- ->
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="vm" class="success">
       <div class="container">
@@ -378,12 +361,20 @@
                 value="Join the Telegram!"
               />
             </form>
+            
+            <form action="https://discord.gg/DpdtRCACeu">
+              <input
+                class="btn-lg btn btn-success"
+                type="submit"
+                value="Join our Discord Server!"
+              />
+            </form>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="socials" class="success">
+    <!-- <section id="socials" class="success">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -406,7 +397,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section id="contact">
