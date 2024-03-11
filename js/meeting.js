@@ -4,7 +4,7 @@ async function showNextMeeting(){
     var meetingsReq = await fetch(url);
     var meetings = await meetingsReq.json();
     for(i = 0; i < meetings.length; i++){
-        var meetingDate = new Date(meetings[i].date + "EST");
+        var meetingDate = new Date(meetings[i].date + meetings[i].starttime);
         if(meetingDate > Date.now()){
             document.getElementById("meeting").innerText = `${meetingDate.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} from ${meetings[i].time}`;
             document.getElementById("meeting_location").innerText = meetings[i].location;
