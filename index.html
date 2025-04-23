@@ -1,20 +1,11 @@
 <html>
-  <!-- Useless comment so github pages rebuilds -->
   <head>
     <meta charset="utf-8">
     <title>RHLUG</title>
-    <!--JQuery from Google CDN-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/customcss.css">
   </head>
 
-  <body>
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- Theme CSS -->
-    <link href="css/freelancer.css" rel="stylesheet" type="text/css" />
-    <!-- Wiki CSS -->
-    <link href="css/customcss.css" rel="stylesheet" type="text/css" />
+  <body onscroll="changeNav()" onload="changeNav()">
 
     <!-- Custom Fonts -->
     <!-- <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
@@ -25,18 +16,6 @@
     />
     <link href="fonts/lato/latofonts.css" rel="stylesheet" type="text/css" />
 
-    <!-- Font awesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
     <!--Script to grab the new meeting time-->
     <script src="./js/meeting.js"></script>
 
@@ -45,11 +24,10 @@
     <!-- Navigation -->
     <nav
       id="mainNav"
-      class="navbar navbar-default navbar-fixed-top navbar-custom"
+      class="navbar"
     >
-      <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
+        <!--<div class="navbar-header page-scroll">
           <button
             type="button"
             class="navbar-toggle"
@@ -60,79 +38,39 @@
             <i class="fa fa-bars"></i>
           </button>
           <a class="navbar-brand" href="#page-top">RHLUG</a>
+        </div>-->
+        <div class="logoCont">
+          <img src="img/whitelug.svg" class="navLogo">
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="hidden">
-              <a href="#page-top"></a>
-            </li>
-            <li class="page-scroll">
+        <div class="navLinks">
               <a href="#email">Join</a>
-            </li>
-            <li class="page-scroll">
-              <a href="#minecraft">Minecraft</a>
-            </li>
-            <li class="page-scroll">
+              <a href="#minecraft">Game Servers</a>
               <a href="#wiki">Wiki</a>
-            </li>
-            <li class="page-scroll">
-              <a href="#vpn">VPN</a>
-            </li>
-            <!-- <li class="page-scroll">
-              <a href="#owncloud">Owncloud</a>
-            </li>-->
-            <li class="page-scroll">
-              <a href="#vm">Physical/Virtual Machines</a>
-            </li>
-            <li class="page-scroll">
               <a href="#about">About</a>
-            </li>
-            <!-- <li class="page-scroll">
-              <a href="#socials">Socials</a>
-            </li> -->
-            <li class="page-scroll">
-              <a href="#contact" id="contactButton">Contact</a>
-            </li>
-          </ul>
+              <a href="#socials">Get In Touch</a>
         </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container-fluid -->
     </nav>
 
     <!-- Header -->
-    <header>
-      <div class="container success" id="page-top">
-        <div class="row">
-          <div class="col-lg-12">
+    <header class="mainHeader">
             <img
-              class="img-responsive profile fullCircle"
-              src="img/rhlug-logo-scaled.svg"
+              class="headerLogo"
+              src="img/whitelug.svg"
               alt=""
             />
-            <div>
-              <h1 class="name">Rose-Hulman Linux Users Group</h1>
-            </div>
-          </div>
-        </div>
-        <div class="row" id="meetingRow">
+
+        <div id="meetingRow">
           <h1><strong>Next Meeting:</strong></h1>
-          <!--Dynamically grab the meeting time using JQuery-->
           <p id="meeting"></p>
-          <br />
-          <p>
-            <strong>
-              &mdash;
-              Join Us In
-              &mdash;
-            </strong>
-          </p>
-          <br />
+          <strong>
+            &mdash;
+            Join Us In
+            &mdash;
+          </strong>
           <p id="meeting_location"></p>
         </div>
-      </div>
     </header>
 
     <section id="email">
@@ -145,7 +83,7 @@
         <hr class="star-light" />
         <div class="row">
           <div class="col-lg-12 text-center">
-            <p style="font-size: 16pt">
+            <p>
               Joining us on Campus Groups will subscribe you to our weekly meeting reminder emails. It also helps us get more funding from SGA, so it's a win-win!
             </p>
             <a href="https://rosehulman.campusgroups.com/feeds?type=club&type_id=35468&tab=home">
@@ -160,42 +98,19 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2>New RH Minecraft Server</h2>
+            <h2>Game Servers</h2>
           </div>
         </div>
         <hr class="star-light" />
         <div class="row">
           <div class="col-lg-12 text-center">
-            <p style="font-size: 16pt">
-              We are glad to announce that the Linux Users Group is sponsoring
-              the official campus-wide Minecraft server. <br />
-              The server is now ready for use by normal players. Feel free to
-              join our Discord server for all updates regarding the server! If
-              you are interested in the internals of how the server works, check
-              out some of the repositories of the LUG GitHub page.
+            <p>
+              LUG hosts multiple game servers for the campus community. Currently, this includes a Minecraft server with Terralith terrain generation, and an unmodified Terraria server. We run a dedicated Minecraft & Terraria Discord Server where we post the most up-to-date info on joining the servers. Please note that access to eduroam or the off-campus VPN is required to play.
             </p>
             <div class="inline-container">
-              <form action="http://wiki.rhlug.org/wiki/RHIT_Minecraft_Server">
-                <input
-                  class="btn-lg btn btn-success-2"
-                  type="submit"
-                  value="Connect to the Minecraft Server"
-                />
-              </form>
-              <form action="https://discord.gg/TRYZya8">
-                <input
-                  class="btn-lg btn btn-success-2"
-                  type="submit"
-                  value="Join the Discord server"
-                />
-              </form>
-              <form action="https://github.com/RHLUG-Org">
-                <input
-                  class="btn-lg btn btn-success-2"
-                  type="submit"
-                  value="Visit our GitHub repos"
-                />
-              </form>
+              <a href="https://discord.gg/TRYZya8">
+                <button>Join the Discord server</button>
+              </a>
             </div>
           </div>
         </div>
@@ -203,253 +118,45 @@
     </section>
 
     <section id="wiki">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2>Wiki</h2>
-          </div>
-        </div>
-        <hr class="star-light" />
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <p style="font-size: 16pt">
-              We maintain a Wiki for people using Linux at Rose-Hulman along
-              with other general Linux information.
-            </p>
-            <form action="http://wiki.rhlug.org/">
-              <input
-                class="btn-lg btn btn-success"
-                type="submit"
-                value="Visit the Wiki"
-              />
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="vpn" class="success">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2>VPN</h2>
-          </div>
-        </div>
-        <hr class="star-light" />
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <p style="font-size: 16pt">
-              To access our physical machines, you have to use Rose-Hulman's SSL
-              VPN. This will also allow to access on-campus only resources from
-              off campus. You can do this under Linux. For more info, please
-              visit our Wiki by clicking on the button below:
-            </p>
-            <form
-              action="http://wiki.rhlug.org/wiki/Accessing_the_Off-Campus_VPN"
-            >
-              <input
-                class="btn-lg btn btn-success-2"
-                type="submit"
-                value="VPN Wiki page"
-              />
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- <section id="owncloud">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2>Owncloud</h2>
-          </div>
-        </div>
-        <hr class="star-light" />
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <p style="font-size: 16pt">
-              Owncloud is an open source and self-hosted alternative to Dropbox
-              (and a few other things) which we host for Rose-Hulman Students,
-              Faculty, and Staff to use. We are still working on getting this up
-              and running again.
-            </p>
-            <form action="https://t.me/rhlug/">
-              <input
-                class="btn-lg btn btn-success"
-                type="submit"
-                value="Stay updated by joining the Telegram"
-              />
-            </form>
-            <!--<form action="https://owncloud.rhlug.org/">
-                        <input class="btn-lg btn btn-success-2" type="submit" value="Go to Owncloud">
-                    </form>- ->
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <section id="vm">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2>Physical/Virtual Machines</h2>
-          </div>
-        </div>
-        <hr class="star-light" />
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <p style="font-size: 16pt">
-              In the future, we will have a general use Linux machine for people
-              to run stuff on, along with bare metal servers as well as virtual
-              machines that people can request. Visit our Wiki page for updated
-              information.
-            </p>
-            <form
-              action="http://wiki.rhlug.org/LUG_Physical_and_Virtual_Machines"
-            >
-              <input
-                class="btn-lg btn btn-success"
-                type="submit"
-                value="Physical/Virtual Machines Wiki page"
-              />
-            </form>
-          </div>
-        </div>
-      </div>
+      <h2>Wiki</h2>
+      <hr>
+      <p>We maintain a wiki to help Rose-Hulman students get up and running with Linux. It contains helpful info on things like disabling Bitlocker on school laptops, connecting to printers under Linux, and installing some class software on Linux.</p>
+      <a href="https://wiki.rhlug.org">
+        <button>Check out the LUG Wiki</button>
+      </a>
     </section>
 
     <!-- About Section -->
     <section id="about"  class="success">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2>About</h2>
-          </div>
-        </div>
-        <hr class="star-light" />
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <p style="font-size: 16pt">
-              The objective of the Rose-Hulman Linux Users Group is to introduce
+      <h2>About</h2>
+      <hr>
+      <p>              The objective of the Rose-Hulman Linux Users Group is to introduce
               alternative operating systems to anyone interested; to provide
               hardware and software to allow people to learn from each other; to
               support members of the Rose-Hulman community with issues related
               to Free and Open Source Software; to encourage the use of Free
               Software and Open Standards; and to inform and discuss
-              advancements in computing technology.
-            </p>
-            <br />
-
-            <p>
-              If you would like more information, or if you want to stay up to
-              date on our club is doing, please join our Telegram group by
-              clicking below:
-            </p>
-
-            <form action="https://matrix.to/#/%23rhlug%3Arhlug.org">
-              <input
-                class="btn-lg btn btn-success-2"
-                type="submit"
-                value="Join the Matrix group!"
-              />
-            </form>
-
-            <form action="https://t.me/rhlug">
-              <input
-                class="btn-lg btn btn-success-2"
-                type="submit"
-                value="Join the Telegram!"
-              />
-            </form>
-            
-            <form action="https://discord.gg/DpdtRCACeu">
-              <input
-                class="btn-lg btn btn-success-2"
-                type="submit"
-                value="Join our Discord Server!"
-              />
-            </form>
-          </div>
-        </div>
-      </div>
+              advancements in computing technology.</p>
     </section>
 
-    <!-- <section id="socials" class="success">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2>Social Media</h2>
-          </div>
-        </div>
+    <section id="socials" class="success">
+        <h2>Get In Touch</h2>
         <hr class="star-light" />
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <p style="font-size: 16pt">
-              Visit us on our new social media accounts!<br />
-            </p>
+          <p>If you would like more information, or if you want to stay up to
+        date on our club is doing, please join us on Discord or Instagram
+            clicking below:</p>
             <div class="socials">
-              <a href="https://twitter.com/LinuxRose" class="fa fa-twitter"></a>
+              <a href="https://discord.gg/DpdtRCACeu" class="fa fa-discord"><img src="img/discord.svg"></a>
               <a
-                href="https://instagram.com/RoseHulmanLinux"
+                href="https://instagram.com/RHIT_LUG"
                 class="fa fa-instagram"
-              ></a>
+              ><img src="img/instagram.svg"></a>
             </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2>Contact</h2>
-          </div>
-        </div>
-        <hr class="star-light" />
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <p style="font-size: 16pt">
-              Questions or want more information about us?
-              Please join the Matrix or Telegram groups and DM one of the officers (which are mods on the Matrix or Telegram server),
-              or contact the <a href="http://wiki.rhlug.org/index.php/Officers">current President listed here</a>
-              by finding his/her email.
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Footer -->
     <footer class="text-center">
-      <div class="footer-above">
-        <div class="container">
-          <div class="row">
-            <div class="text-center footer-col col-md-12">
-              <h3>Location</h3>
-              <p>
-                5500 Wabash Avenue<br />
-                Terre Haute, IN 47803<br />
-                GPS: 39.483876, -87.324020
-              </p>
-              <a href="https://www.openstreetmap.org/#map=17/39.48313/-87.32341"
-                ><img src="img/campus-map.svg"
-              /></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-below">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              Copyright &copy; Rose-Hulman Institute of Technology Linux Users
-              Group 2021
-            </div>
 
-            <div class="col-lg-12">
               Since we're all about open source, we should be providing the
               source code.
               <a
@@ -457,26 +164,9 @@
                 style="color: #cccccc"
                 >Click here to view the source code!</a
               >
-            </div>
-          </div>
-        </div>
-      </div>
+
     </footer>
 
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-      <a class="btn btn-primary" href="#page-top">
-        <i class="fa fa-chevron-up"></i>
-      </a>
-    </div>
-
-    <!-- JQuery -->
-    <script src="js/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/freelancer.min.js"></script>
+    <script src="js/nav.js"></script>
   </body>
 </html>
